@@ -32,7 +32,7 @@ module Lograge
         # Ensure that we always have exactly two decimals
         data[key] = "%.2f" % data[key] if data[key].is_a? Float
         # Params processing
-        data[key] = data[key].gsub('=',':') if key == :params
+        data[key] = data[key].gsub('=>',':') if key == :params
 
         message << "#{key}=#{data[key]}"
         message
